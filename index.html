@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Effet Hover Rectangle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .hover-link {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .hover-link::before,
+        .hover-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #007BFF;
+            transition: all 0.3s ease;
+        }
+
+        .hover-link::before {
+            top: 0;
+            left: 0;
+        }
+
+        .hover-link::after {
+            bottom: 0;
+            right: 0;
+        }
+
+        .hover-link span::before,
+        .hover-link span::after {
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 2px;
+            background-color: #007BFF;
+            transition: all 0.3s ease;
+        }
+
+        .hover-link span::before {
+            top: 0;
+            left: 0;
+        }
+
+        .hover-link span::after {
+            bottom: 0;
+            right: 0;
+        }
+
+        .hover-link:hover::before,
+        .hover-link:hover::after {
+            width: 100%;
+        }
+
+        .hover-link:hover span::before,
+        .hover-link:hover span::after {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="hover-link"><span></span>Voir plus</a>
+    <a href="#" class="hover-link"><span></span>Voir plus</a>
+    <a href="#" class="hover-link"><span></span>Voir plus</a>
+    <a href="#" class="hover-link"><span></span>Voir plus</a>
+    <a href="#" class="hover-link"><span></span>Voir plus</a>
+    lorem
+</body>
+
+</html>
